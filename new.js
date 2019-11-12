@@ -13,7 +13,7 @@
   startSetInter: function (endTime) {
     var that = this;
     var countdownId = 'countdown'
-    let end = new Date(endTime).getTime()
+    let end = new Date(endTime.replace(/-/g, "/")).getTime()
     that.setData({
       [countdownId]: {
         countdown: parseInt((end - new Date().getTime()) / 1000),
